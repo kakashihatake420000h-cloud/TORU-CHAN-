@@ -8,7 +8,7 @@
         <img src="https://i.imgur.com/oEh5VEx.jpeg" alt="Logo">
     </a>
 
-<h3 align="center">✦ 𝙏𝙊𝙍𝙐 𝘾𝙃𝘼𝙉 ✦</h3>
+<h3 align="center">✦ 𝗞𝗔𝗞𝗔𝗦𝗛𝗜 𝗛𝗔𝗧𝗔𝗞𝗘 ✦</h3>
 
 <p align="center">
     A simple Facebook Messenger Bot made by me (Kakashi).
@@ -60,7 +60,7 @@ This project is licensed under the GNU General Public License v3.0 or later - se
 ### 1. Repository Clone Karein
 
 ```bash
-https://github.com/rxabdullah007/Maria-v3.git
+https://github.com/hridoyhossen48360/TORU-CHAN-.git
 ```
 
 ### 2. Dependencies Installed
