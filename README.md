@@ -1,23 +1,14 @@
-<br><br>
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rxmaria761&langs_count=8&theme=react&bg_color=151515" />
+  <a href="####"><img src="http://readme-typing-svg.herokuapp.com?color=cyan&center=true&vCenter=true&multiline=false&lines=`✦ 𝙏𝙊𝙍𝙐 𝘾𝙃𝘼𝙉 ✦`" alt="">
 </p>
-<p align="center">
-<a href="https://github.com/rxmaria761"><img alt="MARIA BOT Github Stats"
-    src="https://github-readme-stats.vercel.app/api?username=rxmaria761&show_icons=true&count_private=true&theme=react&bg_color=151515" /></a>
-<p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rxmaria761&theme=black-ice"
-    alt="rX Abdullah"/></p>
-
-<br/>
-
 
 <br />
 <p align="center">
     <a href="https://github.com/rxabdullah007/Maria-v3">
-        <img src="https://i.imgur.com/I0kvVfu.jpeg" alt="Logo">
+        <img src="https://i.imgur.com/oEh5VEx.jpeg" alt="Logo">
     </a>
 
-<h3 align="center">MARIA CHATBOT</h3>
+<h3 align="center">✦ 𝙏𝙊𝙍𝙐 𝘾𝙃𝘼𝙉 ✦</h3>
 
 <p align="center">
     A simple Facebook Messenger Bot made by me (rX Abdullah).
