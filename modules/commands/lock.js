@@ -4,7 +4,7 @@ module.exports.config = {
     hasPermssion: 2, // bot admin only
     credits: "𝐫𝐗",
     description: "Lock system: locked gc or hard lock (bot admin only)",
-    commandCategory: "group",
+    commandCategory: "Group",
     usages: ".lock gc | .lock hard",
     cooldowns: 5
 };
