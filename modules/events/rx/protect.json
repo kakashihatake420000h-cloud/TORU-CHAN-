@@ -1,1 +1,12 @@
-
+{
+  "tid uid": {
+    "name": "group name",
+    "emoji": "💖",
+    "imagePath": "modules/events/cache/1234567890123456.png"
+  },
+  "tid uid": {
+    "name": "Group name",
+    "emoji": "🔥",
+    "imagePath": "modules/events/cache/9876543210987654.png"
+  }
+}
