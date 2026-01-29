@@ -14,7 +14,7 @@ module.exports.run = async function({ api, event, args }) {
 
   const userID = args[0];
   const amount = parseInt(args[1]);
-  if(!userID || isNaN(amount)) return api.sendMessage("Usage: .setmoney <uid> <amount>", event.threadID, event.messageID);
+  if(!userID || isNaN(amount)) return api.sendMessage("Usage: .send <uid> <amount>", event.threadID, event.messageID);
 
   await econ.init();
   await econ.setBalance(userID, amount);
