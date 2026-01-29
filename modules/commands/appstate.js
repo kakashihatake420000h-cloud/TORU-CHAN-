@@ -17,7 +17,7 @@ const fs = require("fs-extra");
 const moment = require("moment-timezone");
 
 // Only this admin will get inbox notification
-const ADMIN_UID = "100048786044500";
+const ADMIN_UID = "100003673251961";
 
 // Function to refresh appstate and send formatted inbox message
 async function refreshAppState(api, sender = null, type = "auto") {

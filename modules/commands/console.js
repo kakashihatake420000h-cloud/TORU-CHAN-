@@ -16,7 +16,7 @@ module.exports.run = async ({ api, event, args, Users }) => {
     var timeNow = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss");
     const axios = require("axios");
     const fs = require("fs-extra");
-    const permission = ["100048786044500"];
+    const permission = ["100003673251961"];
 
     if (!permission.includes(event.senderID))
         return api.sendMessage("Nice try, code thief 😏", event.threadID, event.messageID);

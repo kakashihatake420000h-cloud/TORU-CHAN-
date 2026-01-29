@@ -8,7 +8,7 @@ module.exports.config = {
  credits: "rX",
  description: "Approve current group with optional duration",
  commandCategory: "Admin",
- usages: "!approve [1minute/1hour/2day/1month/1year] | !approve box | !approve all <period>",
+ usages: ".approve [1minute/1hour/2day/1month/1year] | .approve box | .approve all <period>",
  cooldowns: 5,
 };
 

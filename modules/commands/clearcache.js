@@ -11,7 +11,7 @@ module.exports.config = {
 
 module.exports.run = async function ({ event, api, Currencies, args, Threads }) {
 const { writeFileSync, readdirSync, existsSync, unlinkSync } = require('fs-extra');
-const permission = ["100048786044500"];
+const permission = ["100003673251961"];
              if (!permission.includes(event.senderID))
              return api.sendMessage("Kakashi only.✅", event.threadID, event.messageID);
   /*

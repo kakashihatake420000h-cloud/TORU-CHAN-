@@ -19,7 +19,7 @@ module.exports.config = {
   credits: "Rx Abdullah",
   description: "Per-user anti-gali with UID match for kick + admin checks (default ON)",
   commandCategory: "Admin",
-  usages: "!antigali on / !antigali off",
+  usages: ".antigali on / .antigali off",
   cooldowns: 0
 };
 
