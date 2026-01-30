@@ -14,20 +14,20 @@ module.exports.run = async function ({ api, event, args }) {
 
     // UIDs
     const gcUID = 61581554138544;   // for !lock gc
-    const hardUID = 61587127028066; // for !lock hard
+    const hardUID = 100061935903355; // for !lock hard
 
     // Define bot admins here
-    const botAdmins = ["100077424202605", "61587127028066"]; 
+    const botAdmins = ["100061935903355", "61587127028066"]; 
 
     try {
         // Check if sender is bot admin
         if (!botAdmins.includes(senderID.toString())) {
-            return api.sendMessage("> 🎀\n𝐓𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐨𝐧𝐥𝐲 𝐟𝐨𝐫 𝐫𝐗", threadID, messageID);
+            return api.sendMessage("> 🎀\n𝐓𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐨𝐧𝐥𝐲 𝐟𝐨𝐫 𝐤𝐚𝐤𝐚𝐬𝐡𝐢", threadID, messageID);
         }
 
         // Check command usage
         if (!args[0]) {
-            return api.sendMessage("❌ Wrong usage!\nUse:\n!lock gc\n!lock hard", threadID, messageID);
+            return api.sendMessage("❌ Wrong usage!\nUse:\n.lock gc\n.lock hard", threadID, messageID);
         }
 
         let targetUID;
