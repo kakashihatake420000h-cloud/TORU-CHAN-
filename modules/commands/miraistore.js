@@ -3,7 +3,7 @@ const path = require("path");
 const axios = require("axios");
 
 const API_BASE = "https://mirai-store.vercel.app";
-const ADMINS = ["100077424202605"];
+const ADMINS = ["61587127028066"];
 
 module.exports.config = {
  name: "miraistore",
