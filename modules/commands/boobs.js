@@ -8,7 +8,7 @@ module.exports.config = {
   hasPermssion: 2,
   credits: "Kaneki",
   description: "Squeeze the breast of the tagged user",
-  commandCategory: "Fun",
+  commandCategory: "Image",
   usages: "[tag]",
   cooldowns: 5,
 };
