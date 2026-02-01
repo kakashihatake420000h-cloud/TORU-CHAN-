@@ -75,4 +75,4 @@ module.exports.run = async({
                 }
             }, 3000);
         }, messageID);
-  } we
+}
