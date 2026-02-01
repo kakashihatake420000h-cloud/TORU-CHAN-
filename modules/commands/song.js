@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const baseApiUrl = async () => {
   const base = await axios.get(
-    `https://raw.githubusercontent.com/rummmmna21/rx-api/main/baseApiUrl.json`
+    `https://raw.githubusercontent.com/rxabdullah0007/rX-apis/main/xApis/rXallApi.json`
   );
   return base.data.api;
 };
@@ -89,4 +89,4 @@ async function downloadAudio(url, pathName) {
   const response = (await axios.get(url, { responseType: "arraybuffer" })).data;
   fs.writeFileSync(pathName, Buffer.from(response));
   return fs.createReadStream(pathName);
-}
+  }
