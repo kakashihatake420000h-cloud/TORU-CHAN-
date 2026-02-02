@@ -1,9 +1,9 @@
 module.exports.config = {
   name: "anemi",
-  version: "1.0.0",
+  version: "1.0.1",
   hasPermssion: 0,
   credits: "SHAHADAT SAHU",
-  description: "Random Anime Videos From SAHU API",
+  description: "Random Anime Video",
   commandCategory: "Media",
   usages: "anemi",
   cooldowns: 5
@@ -12,14 +12,31 @@ module.exports.config = {
 module.exports.run = async function ({ api, event }) {
   const axios = global.nodemodule["axios"];
   const fs = global.nodemodule["fs-extra"];
-  const API_LIST_URL = "https://raw.githubusercontent.com/shahadat-sahu/SAHU-API/refs/heads/main/SAHU-API.json";
+
+  const API_LIST_URL =
+    "https://raw.githubusercontent.com/shahadat-sahu/SAHU-API/refs/heads/main/SAHU-API.json";
+
   try {
     const listRes = await axios.get(API_LIST_URL);
-    const apis = listRes.data;
-    const API = apis.anime_video;
+    const data = listRes.data;
+
+    // ✅ SAFE API RESOLVE
+    let API = null;
+
+    if (Array.isArray(data.anime_video)) {
+      API = data.anime_video[Math.floor(Math.random() * data.anime_video.length)];
+    } else if (typeof data.anime_video === "string") {
+      API = data.anime_video;
+    } else if (data.anime && data.anime.video) {
+      API = data.anime.video;
+    }
 
     if (!API) {
-      return api.sendMessage("API Problem Please try again.......", event.threadID, event.messageID);
+      return api.sendMessage(
+        "❌ Anime API পাওয়া যায়নি",
+        event.threadID,
+        event.messageID
+      );
     }
 
     const cacheDir = __dirname + "/cache";
@@ -40,24 +57,26 @@ module.exports.run = async function ({ api, event }) {
     writer.on("finish", () => {
       api.sendMessage(
         {
-          body: "🎬 Kakashi Anemi Random Video",
+          body: " ",
           attachment: fs.createReadStream(filePath)
         },
         event.threadID,
-        () => {
-          if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
-        },
+        () => fs.unlinkSync(filePath),
         event.messageID
       );
     });
 
     writer.on("error", () => {
       if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
-      api.sendMessage("❌ File Writing Error!", event.threadID, event.messageID);
+      api.sendMessage("❌ File error", event.threadID, event.messageID);
     });
 
   } catch (err) {
-    console.log("ANEMI ERROR:", err?.response?.data || err.message);
-    api.sendMessage("❌ API Problem... Try again later!", event.threadID, event.messageID);
+    console.log("ANEMI ERROR:", err.message);
+    api.sendMessage(
+      "❌ Server সমস্যা, পরে আবার চেষ্টা করো",
+      event.threadID,
+      event.messageID
+    );
   }
 };
