@@ -6,7 +6,7 @@ module.exports.config = {
  'description': " ",
  'prefix': true,
  'category': "Tag Fun",
- 'commandCategory': "user",
+ 'commandCategory': "Tag Fun",
  'usages': '@',
  'cooldowns': 5,
  'dependencies': {
