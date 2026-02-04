@@ -40,8 +40,8 @@ module.exports.run = async function ({ api, event, args }) {
       );
     }
 
-    // ✅ Always top video
-    const video = res.data[0];
+    // 🎲 Random video (ONLY CHANGE)
+    const video = res.data[Math.floor(Math.random() * res.data.length)];
 
     await fs.ensureDir(CACHE_DIR);
 
@@ -70,7 +70,6 @@ module.exports.run = async function ({ api, event, args }) {
       writer.on("error", reject);
     });
 
-    // ✅ STEALTH BODY (no TikTok hint)
     api.sendMessage(
       {
         body: ``,
