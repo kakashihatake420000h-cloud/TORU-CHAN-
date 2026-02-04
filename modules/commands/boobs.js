@@ -5,6 +5,7 @@ const axios = require("axios");
 module.exports.config = {
   name: "boobs",
   version: "1.0.0",
+  premium:true,
   hasPermssion: 2,
   credits: "Kaneki",
   description: "Squeeze the breast of the tagged user",
