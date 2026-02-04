@@ -1,6 +1,7 @@
 module.exports.config = {
   name: "pantiesclose2",
   version: "1.0.0",
+  premium:true,
   hasPermssion: 0,
   credits: "Yae Miko",
   description: "Projec M4a",
