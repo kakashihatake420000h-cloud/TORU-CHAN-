@@ -17,7 +17,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "rX",
   description: "AI auto teach with Teach & List  support + Typing effect", //required rx-fca for typing effect
-  commandCategory: "chat",
+  commandCategory: "Group",
   usages: "[query]",
   cooldowns: 0,
   prefix: false
