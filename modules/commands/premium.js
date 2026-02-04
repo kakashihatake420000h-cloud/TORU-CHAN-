@@ -8,7 +8,7 @@ module.exports.config = {
  hasPermssion: 0,
  credits: "rX",
  description: "Buy premium packages or check your premium time",
- commandCategory: "Economy",
+ commandCategory: "Group",
  usages: "premium [package]",
  cooldowns: 5
 };
