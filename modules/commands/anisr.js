@@ -8,9 +8,9 @@ const CACHE_DIR = path.join(__dirname, "cache_tiktok");
 module.exports.config = {
   name: "anisr",
   version: "1.0.1",
-  credits: "rX",
+  credits: "Hridoy",
   hasPermssion: 0,
-  description: "Auto video downloader",
+  description: "Reels",
   commandCategory: "Media",
   usages: "anisr <keyword>",
   cooldowns: 5
