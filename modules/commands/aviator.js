@@ -1,7 +1,7 @@
 module.exports.config = {
   name: "aviator",
-  version: "1.0.1",
-  credits: "rX + Sabah",
+  version: "1.0.2",
+  credits: "Hridoy Hossen",
   description: "Aviator mini game for economy",
   commandCategory: "Game",
   usages: "aviator <bet amount>",
@@ -47,7 +47,16 @@ module.exports.run = async function({ api, event, args, Currencies }) {
   // 🔹 Animate plane
   for (let i = 0; i <= crashIndex; i++) {
     await new Promise(r => setTimeout(r, 400));
-    const text = `🛫 Aviator Game\n\n${frames[i]}`;
+
+    let frameText = frames[i];
+
+    // 💥 show 1 step before crash
+    if (i === crashIndex - 1) {
+      frameText = frameText.replace("✈️", "💥");
+    }
+
+    const text = `🛫 Aviator Game\n\n${frameText}`;
+
     if (i === 0) {
       msg = await api.sendMessage(text, event.threadID);
     } else {
@@ -69,7 +78,7 @@ module.exports.run = async function({ api, event, args, Currencies }) {
   // 🔹 Add balance
   await Currencies.increaseMoney(event.senderID, winAmount);
 
-  // 🔹 Send final message
+  // 🔹 Send final crash message
   await api.editMessage(
     `💥 Plane crashed at ${distance}!\n🎉 You won: ${winAmount} 💰 (x${multiplier})`,
     msg.messageID
