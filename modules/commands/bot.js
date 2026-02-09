@@ -44,7 +44,7 @@ module.exports.handleEvent = async function({ api, event, Users }) {
   // ---------------------------------------------------------------------
   // STEP 1: User types "ai" → First stylish message only
   // ---------------------------------------------------------------------
-  if (body.trim().toLowerCase() === "bot") {
+  if (body.trim().toLowerCase() === "gpt") {
     sessions[senderID] = { history: "", allowAI: true };
 
     const rand = customReplies[Math.floor(Math.random() * customReplies.length)];
