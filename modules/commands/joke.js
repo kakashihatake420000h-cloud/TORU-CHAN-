@@ -3,7 +3,7 @@ module.exports.config = {
 	version: "1.0.0",
 	hasPermssion: 0,
 	credits: "𝙈𝙧𝙏𝙤𝙢𝙓𝙭𝙓",
-	description: "Game",
+	description: "AI",
 	commandCategory: "quotes",
 	cooldowns: 5
 };
