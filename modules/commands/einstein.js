@@ -4,7 +4,7 @@ module.exports.config = {
 	hasPermssion: 0,
 	credits: "𝙈𝙧𝙏𝙤𝙢𝙓𝙭𝙓",
 	description: "Comment on the board",
-	commandCategory: "Memes",
+	commandCategory: "Image",
 	usages: "[text]",
 	cooldowns: 5,
 	dependencies: {
