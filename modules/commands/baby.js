@@ -45,7 +45,7 @@ module.exports.config = {
  hasPermssion: 0,
  credits: "rX",
  description: "AI auto teach with Teach & List support + Typing effect",
- commandCategory: "Utility",
+ commandCategory: "System",
  usages: "[query]",
  cooldowns: 0,
  prefix: false
@@ -179,7 +179,7 @@ module.exports.handleEvent = async function ({ api, event, Users }) {
  if (!text || !simsim) return;
 
  const senderName = await Users.getNameUser(event.senderID);
- const triggers = ["baby", "bby", "bot", "bbz", "toru", "kakashi"];
+ const triggers = ["baby", "bby", "xan", "toru", "bot", "kakashi"];
 
  if (triggers.includes(text)) {
  const replies = [
@@ -216,7 +216,7 @@ module.exports.handleEvent = async function ({ api, event, Users }) {
  });
  }
 
- const matchPrefix = /^(baby|bby|bot|bbz|toru|kakashi)\s+/i;
+ const matchPrefix = /^(baby|bby|xan|toru|bot|kakashi)\s+/i;
  if (matchPrefix.test(text)) {
  const query = text.replace(matchPrefix, "").trim();
  if (!query) return;
