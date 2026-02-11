@@ -5,10 +5,10 @@
 module.exports.config = {
     name: "stop",
     version: "1.0.0",
-    hasPermssion: 0,          // যেকোনো মেম্বারও STOP দিতে পারবে
+    hasPermssion: 2,          // যেকোনো মেম্বারও STOP দিতে পারবে
     credits: "Grok for Hridoy",
     description: "সব স্প্যাম/গালি/লুপ থামানোর জন্য (STOP লিখে রিপ্লাই দাও)",
-    commandCategory: "system",
+    commandCategory: "System",
     usages: "শুধু bot এর মেসেজে STOP রিপ্লাই দাও",
     cooldowns: 3
 };
