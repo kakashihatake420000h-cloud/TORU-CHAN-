@@ -4,7 +4,7 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "Binee",
     description: "Game bầu cua có đặt cược  kiểu anime</> Coder by Binee",
-    commandCategory: "economy",
+    commandCategory: "Game",
     usages: "<[Umaru/Nami/Chitanda/Mirai/Elaina/Mikasa] or [🔥/⚡/��/🦞/🦵/🐱]> <Bet amount (note must be over 50$)>",
     cooldowns: 0
   };
