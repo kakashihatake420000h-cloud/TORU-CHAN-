@@ -32,7 +32,7 @@ module.exports.onLoad = async () => {
 
  
  if (!existsSync(fallbackAvatar)) {
- await downloadFile("https://i.imgur.com/u7b9H4F.png", fallbackAvatar); // Example fallback avatar
+ await downloadFile("https://i.imgur.com/mAKE3I2.jpeg", fallbackAvatar); // Example fallback avatar
  }
 };
 
