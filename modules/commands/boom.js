@@ -4,7 +4,7 @@ module.exports.config = {
     hasPermssion: 2,
     credits: "Hridoy",
     description: "War In Chatbox",
-    commandCategory: "Group",
+    commandCategory: "Admin",
     usages: "[fyt]",
     cooldowns: 7,
     dependencies: {
