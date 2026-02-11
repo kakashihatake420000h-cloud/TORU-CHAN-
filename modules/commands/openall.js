@@ -2,13 +2,13 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports.config = {
-  name: "help",
+  name: "openall",
   version: "4.6.0",
-  hasPermssion: 0,
+  hasPermssion: 2,
   credits: "rX",
   usePrefix: true,
   description: "Paged help menu with progress animation + GIF + auto unsend",
-  commandCategory: "System",
+  commandCategory: "Admin",
   usages: "[command name]",
   cooldowns: 5,
 };
