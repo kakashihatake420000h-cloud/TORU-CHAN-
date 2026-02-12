@@ -4,7 +4,7 @@ module.exports.config = {
 	hasPermssion: 0,
 	credits: "MrTomXxX",
 	description: "Create interactive diagrams with top 8 groups",
-	commandCategory: "Box Chat",
+	commandCategory: "Group",
 	usages: "",
 	cooldowns: 5
 };
