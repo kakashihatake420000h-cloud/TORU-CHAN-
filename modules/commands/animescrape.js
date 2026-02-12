@@ -4,7 +4,7 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "lester navarra",
     description: "scrape anime",
-    commandCategory: "anime",
+    commandCategory: "Utility",
     usages: "<space>AnimeTitle",
     cooldowns: 0
   };
