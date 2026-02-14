@@ -13,8 +13,6 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 
-const dataPath = path.join(__dirname, "cache", "voice.json");
-
 const emojiAudioMap = {
  "🥱": "https://files.catbox.moe/9pou40.mp3",
  "😁": "https://files.catbox.moe/60cwcg.mp3",
