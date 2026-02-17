@@ -1,103 +1,69 @@
-// 🔥 Roast.js — Version 4.0 Public Hellfire Edition
 module.exports.config = {
   name: "roast",
-  version: "4.0.0",
-  hasPermssion: 0, // 🔓 Public command
-  credits: "Hridoy Khan + GPT Hellfire Upgrade 🔥",
-  description: "Give a full-cooked, deadly funny roast 😈",
+  version: "4.3.0",
+  hasPermssion: 0,
+  credits: "𝐇𝐑𝐈𝐃𝐎𝐘 𝐇𝐎𝐒𝐒𝐄𝐍 × Soul Annihilator",
+  description: "এটা roast না, এটা তোর আত্মার GPS destroy করে দেয় 😈🪦",
   commandCategory: "Tag Fun",
   usages: "roast [@tag or name]",
-  cooldowns: 5,
+  cooldowns: 8,
 };
 
 module.exports.run = async function ({ api, event, args }) {
-  // 🛡️ Boss Protection (যাদের roast করা যাবে না)
+
   const bossIDs = ["61587127028066", "100061935903355"];
 
   const mentionIDs = Object.keys(event.mentions);
   const name = mentionIDs.length > 0
-    ? Object.values(event.mentions)[0]
-    : args.join(" ") || "তুই";
+    ? Object.values(event.mentions)[0].replace(/@/g, '')
+    : args.join(" ") || "তোর মতো walking disappointment";
 
-  const targetID = mentionIDs.length > 0 ? mentionIDs[0] : null;
+  const targetID = mentionIDs[0] || null;
 
-  // 🚫 Boss হলে Roast বন্ধ
   if (bossIDs.includes(targetID)) {
     return api.sendMessage(
-      "🛡️ ঐটা আমার Boss ভাই! ওরে roast করলে আমি grill হয়ে যাবো 😭🔥\nBoss untouchable, respect দে 😎",
-      event.threadID,
-      event.messageID
+      "🛑 Boss ke roast korle amar server burn hoye jabe\nGod tier protection active — back off 😤🔥",
+      event.threadID, event.messageID
     );
   }
 
-  // 😈🔥 50+ FULL COOKED ROAST LINES 🔥😈
-  const roasts = [
-    `${name}, তোর মুখে এমন vibe, antivirus warning দেয় 🦠🤣`,
-    `${name}, তুই এমন ugly, mirror ও panic attack খায় 😭🪞`,
-    `${name}, তোর brain loading নিচ্ছে গত 10 বছর ধরে 🔄🤯`,
-    `${name}, তোকে দেখে মনে হয় WiFi আছে কিন্তু internet নাই 📶💀`,
-    `${name}, তোর মুখে এমন dust, Dyson vacuum তোকে sponsor করতে চায় 🧹😹`,
-    `${name}, তুই এত slow, snail তোকে দেখে বলে ‘চল ভাই একটু তাড়াতাড়ি করো’ 🐌💨`,
-    `${name}, তুই এমন hot garbage, dustbin তোকে হিংসে করে 🗑️🔥`,
-    `${name}, তোকে দেখে মনে হয় expired meme template 😭📸`,
-    `${name}, তোর মুখে mosquito bite দিয়েও regret করে 🦟💢`,
-    `${name}, তুই এমন toxic, Chernobyl তোকে বলে ‘stay away bro’ ☢️😩`,
-    `${name}, তোর brain এত empty, echo দেয় ভেতরে 🧠🔊`,
-    `${name}, তোকে দেখে মনে হয় 404 Brain Not Found 😭`,
-    `${name}, তুই এমন বুদ্ধিমান, ক্যালকুলেটর বলে ‘syntax error’ 🤣`,
-    `${name}, তোকে roast করলে smell আসে burnt USB cable 🧯💀`,
-    `${name}, তোকে দেখে FaceApp uninstall হয়ে গেছে 📱💀`,
-    `${name}, তুই এমন cheap, free fire diamond ও তোকে ছুঁইতে চায় না 💎😹`,
-    `${name}, তোর মুখ এমন glitch, Minecraft lag খায় 😭🧱`,
-    `${name}, তুই এমন clown, circus তোকে বলেছে ‘full house bro’ 🤡🚫`,
-    `${name}, তোকে দেখে horror movie cancel হয়ে গেছে 😨🎬`,
-    `${name}, তুই এমন বোকা, AI তোকে দেখে shutdown নেয় 🤖💤`,
-    `${name}, তোর হাসি শুনে ambulance dispatch হয় 🚑🤣`,
-    `${name}, তোর মাথায় এমন bug, developer ও fix দিতে পারে না 🧠🐞`,
-    `${name}, তোকে দেখে মনে হয় random TikTok filter glitch 🥴📲`,
-    `${name}, তুই এমন useless, recycle bin তোকে reject করে 😭🗑️`,
-    `${name}, তোকে roast করলে fire brigade alert পায় 🔥🚒`,
-    `${name}, তুই এমন slow যে buffering icon তোকে respect দেয় 🔄😂`,
-    `${name}, তোর logic এত weak, Windows calculator crash খায় 🧮💥`,
-    `${name}, তোকে দেখে মনে হয় ‘beta version of human’ 😭🧬`,
-    `${name}, তোর মুখ দেখে captcha বলে ‘not human’ 😭🤖`,
-    `${name}, তুই এমন loser, coin toss ও তোকে avoid করে 🪙😹`,
-    `${name}, তোর IQ negative range এ চলে গেছে 📉🤯`,
-    `${name}, তোকে দেখে মনে হয় broken emoji 🫠💔`,
-    `${name}, তুই এমন drama করে, serial director ও resign দিয়েছে 📺😂`,
-    `${name}, তুই এমন boring, mosquito bite দিয়ে ঘুমিয়ে পড়ে 🦟😴`,
-    `${name}, তোকে দেখে মনে হয় expired SIM card 📱🚫`,
-    `${name}, তুই এমন ভোঁতা, mirror বলছে ‘don’t look at me again’ 😭`,
-    `${name}, তোর voice শুনে Siri mute হয়ে গেছে 🎤💀`,
-    `${name}, তোর hairstyle দেখে broomstick হিংসে করে 🧹🤣`,
-    `${name}, তুই এমন confused, compass ও তোকে দিক দেখাতে পারে না 🧭😵‍💫`,
-    `${name}, তোর brain এর RAM full, update দরকার 🤯💻`,
-    `${name}, তোকে দেখে মনে হয় broken power bank 🔋❌`,
-    `${name}, তুই এমন cringe, TikTok algorithm তোকে skip করে 😭📱`,
-    `${name}, তোকে দেখে মনে হয় error 505: logic missing 🤣🧠`,
-    `${name}, তোর মুখে এমন bug, antivirus lifetime license হেরে গেছে 🦠`,
-    `${name}, তুই এমন outdated, floppy disk তোকে দেখে modern মনে হয় 💾😹`,
-    `${name}, তোকে roast করলে NASA signal loss detect করে 🛰️💀`,
-    `${name}, তোর face এমন dull, flashlight ও give up করে 🔦😩`,
-    `${name}, তুই এমন useless, chatGPT ও বলবে “bro I’m done” 💀🤖`,
-    `${name}, তোকে দেখে মনে হয় demo version of failure 🫠😂`,
-    `${name}, তুই এমন cartoon, Tom & Jerry তোকে বাদ দিয়েছে 🐭🤣`,
-    `${name}, তোর মুখে এত drama চলে, Netflix subscription free দেওয়া উচিত 🎬💀`,
-    `${name}, তুই এমন fake, Photoshop ও তোকে বিশ্বাস করে না 🧑‍🎨📸`,
-    `${name}, তোকে roast করলে মাটিও লজ্জায় ঢেকে যায় 😭🌍`,
-    `${name}, তোর চোখে এত ঘুম, alarm clock panic attack খায় ⏰💀`,
-    `${name}, তোকে দেখে মনে হয় rejected AI prototype 🤖❌`,
-    `${name}, তুই এমন bored, Google search result দেয় “try again later” 💤`,
-    `${name}, তুই এমন waste, dustbin তোকে recycle refuse দেয় 🗑️🚫`
+  // 🔥 SOUL CRUSHER ROASTS — longer, meaner, funnier & more dangerous 🔥
+  const soulCrusherRoasts = [
+    `${name}, তোর মা তোকে রাতে ঘুম পাড়াতে গিয়ে lullaby গায় না, বরং quietly বলে “আমি কেন ৯ মাস ধরে এই ভুলটা বয়ে বেড়ালাম?” আর তুই ঘুমিয়ে পড়িস guilt trip খেয়ে 😭`,
+    `${name}, তোকে দেখলে মনে হয় তোর বাবা delivery room-এ ঢুকে বলেছিল “এটা আমার না, এটা hospital-এর drainage pipe থেকে বের হয়েছে” আর doctor ও agree করেছিল nodding head দিয়ে 💀`,
+    `${name}, তুই এমন যে তোর জন্মের দিন astrologer বলেছিল “এই child-এর জন্য world peace impossible” আর তোর মা শুনে silently cry করেছিল`,
+    `${name}, তোর face এত cursed যে তোকে দেখে মিরর নিজে থেকে crack হয়ে যায়, আর ভাঙা টুকরোগুলো বলে “sorry আমরা আর দেখতে পারছি না” 🪞💔`,
+    `${name}, তোর গন্ধ এত lethal যে perfume company তোকে patent করতে চায় “Eau de Death” নামে, আর যারা তোর কাছে আসে তারা পরের ৩ দিন খাবারের taste পায় না 🤢`,
+    `${name}, তুই এমন failure যে তোর life goals দেখে motivational speaker-রা depression-এ চলে যায় আর বলে “ভাই আমরা হাল ছেড়ে দিলাম” 🎤😔`,
+    `${name}, তোকে hug করতে গেলে মানুষের immune system auto-activate হয়ে বলে “abort mission, biohazard detected” আর পিছনে সরে যায় 🫂☣️`,
+    `${name}, তোর personality এত toxic যে Chernobyl-এর tour guide তোকে দেখে বলে “এই level-এর radiation warning sign-ও লাগবে না, তুই নিজেই sign” ☢️`,
+    `${name}, তোর দাঁত এত হলুদ আর crooked যে traffic police তোকে দেখে auto-matically stop করে আর বলে “license দেখা, এই দাঁত দিয়ে কাউকে হাসতে দেখলে fine দিতে হবে” 🚦🦷`,
+    `${name}, তুই এমন যে তোর mom’s phone-এ তোর ছবি দেখলে auto-delete হয়ে যায়, কারণ storage বলে “nah bro, এটা মানসিক ট্রমা” আর recycle bin-ও reject করে 🗑️`,
+    `${name}, তোর existence এত annoying যে universe-এর admin panel-এ তোর নামের পাশে “delete forever” button permanently highlighted থাকে 🌌🗑️`,
+    `${name}, তোকে দেখে মনে হয় God coding করতে গিয়ে copy-paste mistake করেছিল আর debug না করে live-এ ছেড়ে দিয়েছে, তাই তুই এমন bugged version 😭`,
+    `${name}, তোর জীবন এত boring যে Netflix recommendation তোকে দেখে “Are you still watching? … No? Good, neither are we” বলে auto-off হয়ে যায় 📺`,
+    `${name}, তুই এমন low-budget human যে তোর shadow ও moonlight চায় না, আর রাতে তোর পাশে দাঁড়ালে street light ও flicker করে পালাতে চায় 💡🏃`,
+    `${name}, তোর voice শুনলে autotune software নিজে থেকে uninstall হয়ে যায় আর error message দেয় “Sorry, আমি আর এই level-এর torture handle করতে পারছি না” 🎤💀`,
+    `${name}, তোকে roast করতে গেলে আমার AI brain ও temporary shutdown নেয়, কারণ ethics module বলে “bro এটা মানুষ না, এটা walking war crime” 🤖⚠️`,
+    `${name}, তোর life movie যদি বানানো হয় তাহলে tagline হবে “Rated R for Regret” আর audience warning থাকবে “watching this may cause permanent loss of hope” 🎬😭`,
+    `${name}, তুই এমন যে তোর grandma তোকে দেখে বলে “আমি যদি জানতাম এই level-এর নাতি হবে তাহলে ১৯৬০-এই family planning করতাম” 👵💊`,
+    `${name}, তোর face এত ভয়ংকর যে horror movie director তোকে দেখে বলে “ভাই তুই script-এর দরকার নাই, তুই নিজেই jump scare” 🎥👻`,
+    `${name}, তোর জন্মের video যদি viral হয় তাহলে comment section-এ শুধু “abortion was an option” আর “nature really fumbled this one” টাইপের reply আসবে nonstop`,
+    `${name}, তুই এমন যে তোর blood donate করতে গেলে blood bank বলে “sorry আমরা toxic waste accept করি না, please hospital-এর incinerator-এ ফেলে আয়” 🩸🔥`,
+    `${name}, তোকে দেখলে মানুষের survival instinct auto-activate হয় আর brain বলে “fight? No. Flight? Yes. Better: teleport if possible” 🏃‍♂️💨`,
+    `${name}, তোর aura এত negative যে solar panel তোর কাছে গেলে reverse charge করে আর বলে “nah bro, আমি darkness থেকে energy নিতে পারি না” ☀️➖`,
+    `${name}, তুই এমন যে তোর mom pregnancy test positive হওয়ার পর Google search করেছিল “late term options in 2020s” আর doctor-কে ফোন করে confirm করেছিল 😭`,
+    `${name}, তোর personality এত dark যে black hole তোকে দেখে বলে “ভাই তুই আমার থেকেও vacuum of joy” আর event horizon পার করে পালাতে চায় 🌑🏃`,
+    `${name}, তোকে roast করার পর আমার karma meter auto +1000 পায়, কারণ universe বলে “thank you for cleaning this garbage from earth” ♻️😈`,
+    `${name}, তুই এমন যে তোর clone বানালে clone নিজে থেকে suicide note লিখে ফেলবে “I can’t live knowing I look like this” আর আয়নার সামনে দাঁড়াবে না 🪞💀`,
+    `${name}, তোর life এত trash যে landfill manager তোকে দেখে বলে “sorry bro, আমাদের capacity limit আছে, তুই অনেক বেশি” আর gate বন্ধ করে দেয় 🗑️🚪`
   ];
 
-  // Random roast pick
-  const roast = roasts[Math.floor(Math.random() * roasts.length)];
+  const roast = soulCrusherRoasts[Math.floor(Math.random() * soulCrusherRoasts.length)];
 
-  // 🔥 Send message
   return api.sendMessage(
-    `😈🔥 *FULL COOKED ROAST ACTIVATED* 🔥😈\n\n${roast}\n\n💀 Status: Overcooked`,
+    `✦ 𝙏𝙊𝙍𝙐 𝘾𝙃𝘼𝙉 ✦\n\n${roast}\n\n`,
     event.threadID,
     event.messageID
   );
-};
+}
