@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-let simsim = "https://maria-web.onrender.com/";
+let simsim = "https://maria-web.onrender.com";
 let count_req = 0; 
 // Note : THIS CODE MADE BY RX @RX_ABDULLAH007 (GIVE CREDIT OTHERWISE EVERYONE FUCK YOU AT 300 KM SPEED)
 async function sendTypingIndicatorV2(sendTyping, threadID) {
