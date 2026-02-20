@@ -2,7 +2,7 @@ module.exports.config = {
   name: "roast",
   version: "4.3.0",
   hasPermssion: 0,
-  credits: "Hridoy,
+  credits: "Hridoy",
   description: "এটা roast না, এটা তোর আত্মার GPS destroy করে দেয় 😈🪦",
   commandCategory: "Tag Fun",
   usages: "roast [@tag or name]",
